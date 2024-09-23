@@ -1,4 +1,6 @@
 function validAnagram(str1, str2) {
+    // if len doesn't match, obv frequency won't match
+    if (str1.length !== str2.length) return false;
     // create two objects to store the frequency of each char in both strings
     let freq1 = {};
     let freq2 = {};
