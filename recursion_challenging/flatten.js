@@ -14,6 +14,7 @@ function flatten(arr){
     return result;
 }
 
+module.exports = flatten;
 // flatten([1, 2, 3, [4, 5] ]) // [1, 2, 3, 4, 5]
 // flatten([1, [2, [3, 4], [[5]]]]) // [1, 2, 3, 4, 5]
 // flatten([[1],[2],[3]]) // [1,2,3]
