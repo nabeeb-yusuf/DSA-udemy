@@ -19,3 +19,5 @@ function bubbleSort(arr) {
 
     return arr;
 }
+
+console.log(bubbleSort([22,57,45,66,84,52]));
