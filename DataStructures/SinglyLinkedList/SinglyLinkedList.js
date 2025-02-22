@@ -79,4 +79,22 @@ class SinglyLinkedList {
 
         return temp; // return the head node we just removed
     }
+
+    unshift(val) {
+        let newNode = new Node(val);
+
+        if (!this.head) { // If empty list
+            this.head = newNode;
+            this.tail = this.head;
+            this.length += 1;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+            this.length += 1;
+        }
+
+        return this;
+    }
 }
+
+module.exports = SinglyLinkedList;
