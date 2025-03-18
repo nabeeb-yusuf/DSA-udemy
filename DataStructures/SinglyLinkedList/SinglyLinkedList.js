@@ -165,6 +165,22 @@ class SinglyLinkedList {
 
         return this;
     }
+
+    rotate(n) {
+        let trueN = ((n % this.length) + this.length) % this.length;
+        if (trueN === 0 || this.length < 2) return this;
+        let count = 0;
+        let cur = this.tail;
+        this.tail.next = this.head;
+        while (count < trueN) {
+            cur = cur.next;
+            count++;
+        }
+        this.tail = cur;
+        this.head = cur.next;
+        this.tail.next = null;
+        return this;
+    }
 }
 
 module.exports = SinglyLinkedList;
